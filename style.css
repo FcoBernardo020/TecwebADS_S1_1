@@ -1,0 +1,550 @@
+/* Paleta de Cores Clara e Institucional */
+:root {
+    --verde-ifce-escuro: #1b5e20;  /* Cor primária de destaque institucional */
+    --verde-ifce-medio: #2e7d32;
+    --verde-ifce-claro: #e8f5e9;   /* Fundos claros */
+    --portugal-vermelho: #b71c1c;  /* Detalhes temáticos para a seção internacional */
+    --texto-escuro: #212121;       /* Excelente contraste para leitura */
+    --texto-mutado: #616161;
+    --cinza-fundo: #f9f9f9;
+    --branco: #ffffff;
+    --borda: #e0e0e0;
+}
+
+/* Reset Geral e Acessibilidade */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--branco);
+    color: var(--texto-escuro);
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Barra de Acessibilidade */
+.barra-superior {
+    background-color: #154326;
+    color: var(--branco);
+    font-size: 12px;
+    padding: 6px 0;
+}
+
+.barra-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.Ir-conteudo {
+    color: var(--verde-ifce-claro);
+    text-decoration: none;
+    border-bottom: 1px dotted var(--verde-ifce-claro);
+}
+
+/* Cabeçalho */
+header {
+    background-color: var(--branco);
+    border-bottom: 4px solid var(--verde-ifce-escuro);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+}
+
+/* Espaço reservado para a logo */
+.logo-placeholder {
+    background-color: var(--cinza-fundo);
+    border: 2px dashed var(--verde-ifce-medio);
+    padding: 12px 20px;
+    border-radius: 4px;
+    font-size: 13px;
+    color: var(--verde-ifce-escuro);
+    font-weight: bold;
+    text-align: center;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--texto-escuro);
+    font-weight: 600;
+    font-size: 15px;
+    transition: color 0.2s ease;
+}
+
+nav a:hover {
+    color: var(--verde-ifce-escuro);
+}
+
+/* Seção Hero - Layout estruturado */
+.hero {
+    background-color: var(--verde-ifce-claro);
+    padding: 60px 0;
+    border-bottom: 1px solid var(--borda);
+}
+
+.hero-container {
+    display: table;
+    width: 100%;
+}
+
+.hero-texto {
+    display: table-cell;
+    width: 55%;
+    vertical-align: middle;
+    padding-right: 40px;
+}
+
+.hero-imagem-container {
+    display: table-cell;
+    width: 45%;
+    vertical-align: middle;
+}
+
+.hero-texto h1 {
+    font-size: 36px;
+    color: var(--verde-ifce-escuro);
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.hero-texto p {
+    font-size: 17px;
+    color: #37474f;
+    margin-bottom: 30px;
+}
+
+/* Botões Customizados */
+.hero-botoes {
+    display: block;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 24px;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 4px;
+    text-transform: uppercase;
+    font-size: 14px;
+    transition: all 0.2s ease;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+.btn-primario {
+    background-color: var(--verde-ifce-escuro);
+    color: var(--branco);
+}
+
+.btn-primario:hover {
+    background-color: var(--verde-ifce-medio);
+}
+
+.btn-secundario {
+    background-color: transparent;
+    color: var(--verde-ifce-escuro);
+    border: 2px solid var(--verde-ifce-escuro);
+}
+
+.btn-secundario:hover {
+    background-color: var(--verde-ifce-escuro);
+    color: var(--branco);
+}
+
+.btn-branco {
+    background-color: var(--branco);
+    color: var(--portugal-vermelho);
+}
+
+.btn-branco:hover {
+    background-color: var(--cinza-fundo);
+}
+
+/* Estrutura de Espaços para Fotos (Placeholders) */
+.foto-placeholder {
+    background-color: #e0e0e0;
+    border: 3px dashed #b0bec5;
+    border-radius: 6px;
+    display: block;
+    width: 100%;
+    min-height: 250px;
+    text-align: center;
+    position: relative;
+    color: #546e7a;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.foto-placeholder.alta {
+    min-height: 320px;
+}
+
+.foto-placeholder.clara {
+    background-color: rgba(250,250,250,0.2);
+    border-color: rgba(250,250,250,0.6);
+    color: var(--branco);
+}
+
+.foto-placeholder span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+}
+
+/* Estruturas de Seções Gerais */
+.secao-clara {
+    background-color: var(--branco);
+    padding: 70px 0;
+}
+
+.secao-cinza {
+    background-color: var(--cinza-fundo);
+    padding: 70px 0;
+    border-top: 1px solid var(--borda);
+    border-bottom: 1px solid var(--borda);
+}
+
+.titulo-secao {
+    font-size: 28px;
+    color: var(--verde-ifce-escuro);
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.subtitulo-secao {
+    text-align: center;
+    color: var(--texto-mutado);
+    font-size: 16px;
+    margin-bottom: 45px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Tabelas e Linhas de Grade Nativa */
+.grid-3 {
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+    border-collapse: separate;
+    border-spacing: 20px 0;
+}
+
+.card-ingresso, .card-simples {
+    display: table-cell;
+    background-color: var(--branco);
+    border: 1px solid var(--borda);
+    border-radius: 6px;
+    padding: 25px;
+    vertical-align: top;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+}
+
+.card-ingresso h3, .card-simples h3 {
+    font-size: 19px;
+    color: var(--verde-ifce-escuro);
+    margin-bottom: 12px;
+}
+
+.card-ingresso p, .card-simples p {
+    font-size: 14.5px;
+    color: var(--texto-mutado);
+    margin-bottom: 20px;
+}
+
+.badge-ingresso {
+    display: inline-block;
+    background-color: var(--verde-ifce-claro);
+    color: var(--verde-ifce-escuro);
+    font-size: 12px;
+    font-weight: bold;
+    padding: 4px 10px;
+    border-radius: 20px;
+    margin-bottom: 15px;
+}
+
+.link-seta {
+    color: var(--verde-ifce-medio);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.link-seta:hover {
+    text-decoration: underline;
+}
+
+/* Seção Pilares (Grid 2 colunas) */
+.grid-2 {
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+}
+
+.bloco-texto {
+    display: table-cell;
+    width: 50%;
+    padding-right: 30px;
+    vertical-align: middle;
+}
+
+.bloco-imagem {
+    display: table-cell;
+    width: 50%;
+    vertical-align: middle;
+}
+
+.item-pilar {
+    margin-bottom: 30px;
+}
+
+.item-pilar h3 {
+    color: var(--verde-ifce-escuro);
+    font-size: 20px;
+    margin-bottom: 8px;
+}
+
+.icone-oportunidade {
+    font-size: 32px;
+    display: block;
+    margin-bottom: 15px;
+}
+
+/* Seção Especial: Portugal / Internacional */
+.secao-destaque-portugal {
+    background: linear-gradient(135deg, #1b5e20 0%, #b71c1c 100%);
+    color: var(--branco);
+    padding: 80px 0;
+}
+
+.grid-2-central {
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+}
+
+.internacional-imagem {
+    display: table-cell;
+    width: 45%;
+    vertical-align: middle;
+    padding-right: 40px;
+}
+
+.internacional-texto {
+    display: table-cell;
+    width: 55%;
+    vertical-align: middle;
+}
+
+.tag-internacional {
+    display: inline-block;
+    background-color: rgba(255,255,255,0.2);
+    padding: 4px 12px;
+    border-radius: 4px;
+    font-size: 13px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+.internacional-texto h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.internacional-texto p {
+    font-size: 16px;
+    margin-bottom: 25px;
+    opacity: 0.95;
+}
+
+.beneficios-portugal {
+    margin-bottom: 30px;
+}
+
+.beneficio-item {
+    background-color: rgba(0,0,0,0.15);
+    padding: 15px;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    font-size: 14.5px;
+    border-left: 4px solid var(--branco);
+}
+
+/* Seção de Contato e Formulário */
+.secao-contato {
+    background-color: var(--cinza-fundo);
+    padding: 70px 0;
+    border-top: 1px solid var(--borda);
+}
+
+.informacoes-contato {
+    margin-top: 30px;
+}
+
+.informacoes-contato p {
+    margin-bottom: 12px;
+    font-size: 15px;
+}
+
+.card-formulario {
+    background-color: var(--branco);
+    padding: 30px;
+    border-radius: 8px;
+    border: 1px solid var(--borda);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.card-formulario h3 {
+    margin-bottom: 20px;
+    color: var(--verde-ifce-escuro);
+}
+
+.campo {
+    margin-bottom: 15px;
+}
+
+.campo label {
+    display: block;
+    font-weight: 600;
+    font-size: 13.5px;
+    margin-bottom: 6px;
+}
+
+.campo input, .campo select, .campo textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    background-color: #fafafa;
+}
+
+.campo input:focus, .campo select:focus, .campo textarea:focus {
+    outline: none;
+    border-color: var(--verde-ifce-medio);
+    background-color: var(--branco);
+}
+
+.full-width {
+    width: 100%;
+    text-align: center;
+    border: none;
+    cursor: pointer;
+}
+
+/* Rodapé */
+footer {
+    background-color: #1a1a1a;
+    color: #e0e0e0;
+    padding: 50px 0 20px;
+}
+
+.footer-conteudo {
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+}
+
+.footer-bloco {
+    display: table-cell;
+    padding-right: 20px;
+    vertical-align: top;
+}
+
+.footer-bloco h4 {
+    color: var(--branco);
+    margin-bottom: 15px;
+    font-size: 16px;
+    border-left: 3px solid var(--verde-ifce-medio);
+    padding-left: 8px;
+}
+
+.footer-bloco p {
+    font-size: 13.5px;
+    line-height: 1.5;
+}
+
+.footer-links {
+    list-style: none;
+}
+
+.footer-links li {
+    margin-bottom: 8px;
+}
+
+.footer-links a {
+    color: #b0bec5;
+    text-decoration: none;
+    font-size: 13.5px;
+}
+
+.footer-links a:hover {
+    color: var(--branco);
+    text-decoration: underline;
+}
+
+.footer-creditos {
+    text-align: center;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid #333;
+    font-size: 12px;
+    color: #757575;
+}
+
+/* Responsividade Adaptativa Base para Dispositivos Móveis */
+@media screen and (max-width: 768px) {
+    .header-container, nav ul {
+        display: block;
+        text-align: center;
+    }
+    nav ul {
+        margin-top: 15px;
+    }
+    nav ul li {
+        display: inline-block;
+        margin: 5px 10px;
+    }
+    .hero-container, .grid-3, .grid-2, .grid-2-central, .footer-conteudo {
+        display: block !important;
+    }
+    .hero-texto, .hero-imagem-container, .card-ingresso, .card-simples, .bloco-texto, .bloco-imagem, .internacional-imagem, .internacional-texto, .footer-bloco {
+        display: block !important;
+        width: 100% !important;
+        padding-right: 0 !important;
+        margin-bottom: 30px;
+    }
+    .logo-placeholder {
+        margin-bottom: 10px;
+    }
+}
